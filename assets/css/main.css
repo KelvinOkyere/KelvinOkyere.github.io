@@ -89,6 +89,10 @@ overflow: hidden;
 
 	
 }
+.submitit{
+	display: flex;
+	justify-content: center;
+}
 .linkbox{
 	display: inline-block;
 	background-color: yellow;
