@@ -77,22 +77,30 @@ input, select, textarea {
 /* slider */
 .slider-container {
     position: relative;
-    width: 100%; /* Makes it responsive */
-    max-width: 640px; /* Set a max width */
-    aspect-ratio: 16 / 9; /* Maintains a 16:9 aspect ratio */
+    width: 90%; /* Makes it responsive while keeping some margins */
+    max-width: 640px; /* Restricts the max size */
+    aspect-ratio: 16 / 9; /* Maintains 16:9 aspect ratio */
     overflow: hidden;
-    margin: 0 auto; /* Centers the container horizontally */
+    margin: 0 auto; /* Centers the container */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .slider-container video {
-    width: 100%; /* Ensures it scales properly */
-    height: 100%;
+    width: 100%; /* Ensures full responsiveness */
+    height: auto; /* Adjusts height automatically */
     object-fit: cover; /* Prevents stretching */
     display: block;
 }
+
+/* Adjust for smaller mobile screens */
+@media (max-width: 480px) {
+    .slider-container {
+        width: 100%; /* Takes full width on small screens */
+    }
+}
+
 
 
 .submitit{
